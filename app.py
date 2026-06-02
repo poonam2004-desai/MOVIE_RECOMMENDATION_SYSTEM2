@@ -3202,7 +3202,7 @@ def ask_cinematch_ai(user_message, df, chat_history):
     import random
     import difflib
 
-    OPENROUTER_API_KEY = "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"
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
     catalog_lines = []
     if df is not None and not df.empty:
         sample = df[['title', 'language']].dropna().head(200)
@@ -4767,7 +4767,7 @@ def render_chatbot_page(df):
     if 'active_filter' in st.session_state:
         del st.session_state['active_filter']
 
-    YOUR_OPENROUTER_KEY = "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"
+    YOUR_OPENROUTER_KEY = os.getenv("OPENROUTER_API_KEY")
 
 
     # ── HEADER ──
