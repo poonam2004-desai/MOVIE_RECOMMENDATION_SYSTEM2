@@ -13,6 +13,9 @@ import re
 import importlib
 import json
 import streamlit.components.v1 as components
+from dotenv import load_dotenv
+
+load_dotenv()
 try:
     import anthropic
 except Exception:
@@ -2571,7 +2574,7 @@ st.markdown(
 )
 
 # Constants
-TMDB_API_KEY = "a71b1374a6f462f48dc76e74d341ffba"
+TMDB_API_KEY = "02d147479b34c1eb87635aae56aeefc1"
 TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 GENRE_OPTIONS = [
     'All', 'Action', 'Adventure', 'Animation', 'Comedy',
@@ -3199,8 +3202,7 @@ def ask_cinematch_ai(user_message, df, chat_history):
     import random
     import difflib
 
-    OPENROUTER_API_KEY = "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"
-
+    OPENROUTER_API_KEY = "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"
     catalog_lines = []
     if df is not None and not df.empty:
         sample = df[['title', 'language']].dropna().head(200)
@@ -4765,7 +4767,7 @@ def render_chatbot_page(df):
     if 'active_filter' in st.session_state:
         del st.session_state['active_filter']
 
-    YOUR_OPENROUTER_KEY = "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"
+    YOUR_OPENROUTER_KEY = "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"
 
 
     # ── HEADER ──
