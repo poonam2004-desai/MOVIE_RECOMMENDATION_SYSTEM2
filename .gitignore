@@ -1,0 +1,7 @@
+﻿similarity.pkl
+movies.pkl
+indian_movies.pkl
+movies.db
+__pycache__/
+*.pyc
+.venv/
